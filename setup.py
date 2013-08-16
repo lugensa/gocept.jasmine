@@ -20,6 +20,10 @@ setup(
     version='0.1.dev0',
 
     install_requires=[
+        'fanstatic',
+        'gocept.selenium>=2.0.0b4',
+        'jasmine-core',
+        'plone.testing',
         'setuptools',
     ],
 
@@ -32,10 +36,13 @@ setup(
         'console_scripts': [
             # 'binary-name = gocept.jasmine.module:function'
         ],
+        'fanstatic.libraries': [
+            'gocept.jasmine = gocept.jasmine.resource:library',
+        ],
     },
 
-    author='gocept <mail@gocept.com>',
-    author_email='mail@gocept.com',
+    author='Sebastian Wehrmann <swl@gocept.com>',
+    author_email='sw@gocept.com',
     license='ZPL 2.1',
     url='https://bitbucket.org/gocept/gocept.jasmine/',
 
