@@ -41,3 +41,19 @@ Browser. The TestApp renders your `body` and includes all needed resources and
 then runs the jasmine tests. `run_jasmine` will wait for these tests to finish
 and the report success or failure. Jasmine tracebacks and error details are
 visible through the selenium error handling.
+
+
+Debugging
+---------
+
+You can set the `debug` flag on your test case to get a pdb debugger right
+after the start of the jasmine tests. This lets you debug your jasmine tests
+within your browser::
+
+    class MyJasmineTestCase(gocept.jasmine.jasmine.TestCase):
+
+        layer = gocept.jasmine.jasmine.get_layer(MyTestApp())
+        debug = True
+
+        def test_integration(self):
+            self.run_jasmine()

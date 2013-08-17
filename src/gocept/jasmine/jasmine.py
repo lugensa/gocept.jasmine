@@ -3,9 +3,10 @@
 # See also LICENSE.txt
 
 import fanstatic
+import gocept.httpserverlayer.wsgi
 import gocept.jasmine.resource
 import gocept.selenium.webdriver
-import gocept.httpserverlayer.wsgi
+import pdb
 import plone.testing
 import unittest
 
@@ -64,12 +65,15 @@ class TestCase(unittest.TestCase,
                gocept.selenium.webdriver.WebdriverSeleneseTestCase):
 
     layer = NotImplemented
+    debug = False
 
     def run_jasmine(self, url=None):
         if url is None:
             url = '/'
         sel = self.selenium
         sel.open(url)
+        if self.debug:
+            pdb.set_trace()
         sel.waitForPageToLoad()
         sel.waitForElementPresent('css=.passingAlert, .failingAlert')
         summary = sel.getText('css=.bar')
