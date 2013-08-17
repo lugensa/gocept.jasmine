@@ -24,31 +24,17 @@ You need two things to run jasmine tests with selenium:
             # HTML setup for your tests goes here
             return '<div id="my_container"></div>'
 
-* A TestCase with a proper layer setup::
-
-    JASMINE_LAYER = gocept.jasmine.jasmine.Layer(
-        application=MyTestApp(), name='JasmineLayer')
-
-    HTTP_SERVER_LAYER = gocept.httpserverlayer.wsgi.Layer(
-        name='HTTPServerLayer', bases=(WSGI_LAYER,))
-
-    WEBDRIVER_LAYER = gocept.selenium.webdriver.Layer(
-        name='WebdriverLayer', bases=(HTTP_SERVER_LAYER,))
-
-    SELENESE_LAYER = gocept.selenium.webdriver.WebdriverSeleneseLayer(
-        name='SeleneseLayer', bases=(WEBDRIVER_LAYER,))
-
+* A TestCase with the jasmine layer::
 
     class MyJasmineTestCase(gocept.jasmine.jasmine.TestCase):
 
-        layer = SELENESE_LAYER
+        layer = gocept.jasmine.jasmine.get_layer(MyTestApp())
 
         def test_integration(self):
             self.run_jasmine()
 
-Please refer to the `gocept.selenium` documentation for information about the
-layer setup. The important things here are, that the `JASMINE_LAYER` is given
-your jasmine app and that this Layer is used on yout TestCase.
+The important things here are, that the `get_layer` function is given
+your jasmine app and that the returned Layer is used on yout TestCase.
 
 In your Test, simple run `run_jasmine`, which will open the TestApp in your
 Browser. The TestApp renders your `body` and includes all needed resources and

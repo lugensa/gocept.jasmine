@@ -12,8 +12,8 @@ API Reference
   Allows you to require your jasmine test resources and to setup HTML for your
   tests.
 
-* `gocept.jasmine.jasmine.Layer()`: Basic layer for jasmine tests. Sets up the
-  give application.
+* `gocept.jasmine.jasmine.get_layer(application)`: Sets up all layers needed to
+  run webdriver tests with jasmine. Gets your `TestApp` as argument.
 
 * `gocept.jasmine.jasmine.TestCase()`: Basic TestCase containing infrastructure
   to run jasmine tests and make the test results visible.

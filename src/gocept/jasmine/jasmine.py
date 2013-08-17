@@ -5,6 +5,7 @@
 import fanstatic
 import gocept.jasmine.resource
 import gocept.selenium.webdriver
+import gocept.httpserverlayer.wsgi
 import plone.testing
 import unittest
 
@@ -46,6 +47,17 @@ class Layer(plone.testing.Layer):
         super(Layer, self).tearDown()
         del self['application']
         del self['wsgi_app']
+
+
+def get_layer(application):
+    wsgi_layer = Layer(application=application, name='ApplicationLayer')
+    server_layer = gocept.httpserverlayer.wsgi.Layer(
+        name='HTTPServerLayer', bases=(wsgi_layer,))
+    webdriver_layer = gocept.selenium.webdriver.Layer(
+        name='WebdriverLayer', bases=(server_layer,))
+    layer = gocept.selenium.webdriver.WebdriverSeleneseLayer(
+        name='JasmineLayer', bases=(webdriver_layer,))
+    return layer
 
 
 class TestCase(unittest.TestCase,

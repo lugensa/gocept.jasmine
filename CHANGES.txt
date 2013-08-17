@@ -5,7 +5,7 @@ Change log for gocept.jasmine
 0.2 (unreleased)
 ================
 
-- Nothing changed yet.
+- Added helper function to ease test layer setup.
 
 
 0.1 (2013-08-16)
