@@ -5,7 +5,8 @@ Change log for gocept.jasmine
 0.3 (unreleased)
 ================
 
-- Nothing changed yet.
+- Fixed a problem where the testrunner finished `sucessfully` before all
+  jasmine tests finished in browser.
 
 
 0.2 (2013-08-17)

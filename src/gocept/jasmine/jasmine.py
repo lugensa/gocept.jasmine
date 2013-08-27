@@ -75,7 +75,7 @@ class TestCase(unittest.TestCase,
         if self.debug:
             pdb.set_trace()
         sel.waitForPageToLoad()
-        sel.waitForElementPresent('css=.passingAlert, .failingAlert')
+        sel.waitForTextPresent('gocept.jasmine.tests.finished')
         summary = sel.getText('css=.bar')
         if 'Failing' in summary:
             message = '\n\n'.join(f.text for f in sel.selenium.

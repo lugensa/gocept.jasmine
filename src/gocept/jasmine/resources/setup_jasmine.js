@@ -23,5 +23,19 @@
     jasmineEnv.execute();
   }
 
+jasmine.Suite.prototype.finish = function(onComplete) {
+  // XXX This code was copied from jasmine.js :-(
+  this.env.reporter.reportSuiteResults(this);
+  this.finished = true;
+  if (typeof(onComplete) == 'function') {
+    onComplete();
+  }
+  if (!document.getElementsByClassName('runningAlert').length) {
+    var div = document.createElement('DIV');
+    div.appendChild(document.createTextNode('gocept.jasmine.tests.finished'));
+    document.body.appendChild(div);
+  }
+};
+
 })();
 
