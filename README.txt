@@ -34,7 +34,7 @@ You need two things to run jasmine tests with selenium:
             self.run_jasmine()
 
 The important things here are, that the `get_layer` function is given
-your jasmine app and that the returned Layer is used on yout TestCase.
+your jasmine app and that the returned Layer is used on your TestCase.
 
 In your Test, simple run `run_jasmine`, which will open the TestApp in your
 Browser. The TestApp renders your `body` and includes all needed resources and
