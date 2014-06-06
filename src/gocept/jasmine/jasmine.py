@@ -38,26 +38,30 @@ class Layer(plone.testing.Layer):
         super(Layer, self).__init__(bases, name, module)
         if application is None:
             raise ValueError('Layer needs a WSGI app to run.')
-        self['application'] = application
+        self.application = application
 
     def setUp(self):
         super(Layer, self).setUp()
+        self['application'] = self.application
         self['wsgi_app'] = fanstatic.Fanstatic(self['application'])
 
     def tearDown(self):
         super(Layer, self).tearDown()
-        del self['application']
         del self['wsgi_app']
+        del self['application']
 
 
 def get_layer(application):
-    wsgi_layer = Layer(application=application, name='ApplicationLayer')
+    # in case an KeyError 'selenium' is thrown, check that the class names
+    # of your test applications are unique
+    prefix = application.__class__.__name__
+    wsgi_layer = Layer(application=application, name='{}Layer'.format(prefix))
     server_layer = gocept.httpserverlayer.wsgi.Layer(
-        name='HTTPServerLayer', bases=(wsgi_layer,))
+        name='{}HTTPServerLayer'.format(prefix), bases=(wsgi_layer,))
     webdriver_layer = gocept.selenium.webdriver.Layer(
-        name='WebdriverLayer', bases=(server_layer,))
+        name='{}WebdriverLayer'.format(prefix), bases=(server_layer,))
     layer = gocept.selenium.webdriver.WebdriverSeleneseLayer(
-        name='JasmineLayer', bases=(webdriver_layer,))
+        name='{}JasmineLayer'.format(prefix), bases=(webdriver_layer,))
     return layer
 
 
