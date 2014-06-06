@@ -2,7 +2,7 @@
 Change log for gocept.jasmine
 =============================
 
-0.4 (unreleased)
+0.4 (2014-06-06)
 ================
 
 - Make it possible to run multiple TestApps.
