@@ -41,7 +41,7 @@ setup(
         ],
     },
 
-    author='Sebastian Wehrmann <swl@gocept.com>',
+    author='Sebastian Wehrmann <sw@gocept.com>',
     author_email='sw@gocept.com',
     license='ZPL 2.1',
     url='https://bitbucket.org/gocept/gocept.jasmine/',
