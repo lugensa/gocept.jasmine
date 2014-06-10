@@ -11,11 +11,13 @@ library = fanstatic.Library('gocept.jasmine', 'resources', minifiers=MINIFIERS)
 
 jasmine_css = fanstatic.Resource(library, 'jasmine.css')
 jasmine_js = fanstatic.Resource(library, 'jasmine.js')
+mock_ajax_js = fanstatic.Resource(
+    library, 'mock-ajax.js', depends=[jasmine_js])
 jasmine_html = fanstatic.Resource(
     library, 'jasmine-html.js', depends=[jasmine_js])
 
 jasmine = fanstatic.Resource(
     library,
     'setup_jasmine.js',
-    depends=[jasmine_css, jasmine_html],
+    depends=[jasmine_css, jasmine_html, mock_ajax_js],
     bottom=False)

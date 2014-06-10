@@ -5,7 +5,7 @@ Change log for gocept.jasmine
 0.5 (unreleased)
 ================
 
-- Nothing changed yet.
+- Add JS library to mock ajax calls during jasmine tests.
 
 
 0.4 (2014-06-06)
