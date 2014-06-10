@@ -17,7 +17,7 @@ def project_path(*names):
 
 setup(
     name='gocept.jasmine',
-    version='0.5',
+    version='0.6.dev0',
 
     install_requires=[
         'fanstatic',
