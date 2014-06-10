@@ -5,7 +5,7 @@ Change log for gocept.jasmine
 0.6 (unreleased)
 ================
 
-- Nothing changed yet.
+- The last two releases (0.4 and 0.5) were brown bag releases, so we need to make a new one.
 
 
 0.5 (2014-06-10)
