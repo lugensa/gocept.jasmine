@@ -5,7 +5,7 @@ Change log for gocept.jasmine
 0.6 (unreleased)
 ================
 
-- Nothing changed yet.
+- Update to fanstatic 1.0a to use minifier.
 
 
 0.5.1 (2014-06-10)
