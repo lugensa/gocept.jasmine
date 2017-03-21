@@ -8,7 +8,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='gocept.jasmine',
-    version='0.6',
+    version='0.7.dev0',
 
     install_requires=[
         'fanstatic',
