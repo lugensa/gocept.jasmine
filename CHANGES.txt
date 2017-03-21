@@ -7,6 +7,8 @@ Change log for gocept.jasmine
 
 - Update to fanstatic 1.0a to use minifier.
 
+- Ensure compatibility with `setuptools >= 30.0`.
+
 
 0.5.1 (2014-06-10)
 ==================
