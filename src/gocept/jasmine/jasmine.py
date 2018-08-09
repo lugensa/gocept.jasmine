@@ -23,7 +23,7 @@ class TestApp(object):
         return ''
 
     def __call__(self, environ, start_response):
-        start_response('200 OK', [])
+        start_response('200 OK', [('Content-Type', 'text/html')])
         self.need_resources()
         gocept.jasmine.resource.jasmine.need()
         return [

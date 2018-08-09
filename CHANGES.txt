@@ -8,6 +8,8 @@ Change log for gocept.jasmine
 - Remove version pinnings in buildout as this is a library which should
   run with the newest versions of its dependencies.
 
+- Add a simple self test.
+
 
 0.6 (2017-03-21)
 ================
