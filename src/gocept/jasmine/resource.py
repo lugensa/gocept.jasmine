@@ -21,3 +21,6 @@ jasmine = fanstatic.Resource(
     'setup_jasmine.js',
     depends=[jasmine_css, jasmine_html, mock_ajax_js],
     bottom=False)
+
+selftest = fanstatic.Resource(
+    library, 'selftest.js', depends=[jasmine])
