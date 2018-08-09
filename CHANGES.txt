@@ -5,7 +5,8 @@ Change log for gocept.jasmine
 0.7 (unreleased)
 ================
 
-- Nothing changed yet.
+- Remove version pinnings in buildout as this is a library which should
+  run with the newest versions of its dependencies.
 
 
 0.6 (2017-03-21)
