@@ -10,6 +10,8 @@ Change log for gocept.jasmine
 
 - Add a simple self test.
 
+- Require ``pytest < 5`` to keep Python 2 support.
+
 
 0.6 (2017-03-21)
 ================
