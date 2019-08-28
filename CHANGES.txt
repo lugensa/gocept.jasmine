@@ -12,6 +12,8 @@ Change log for gocept.jasmine
 
 - Require ``pytest < 5`` to keep Python 2 support.
 
+- Migrate to Github.
+
 
 0.6 (2017-03-21)
 ================

@@ -9,10 +9,10 @@ Developing gocept.jasmine
     http://pypi.python.org/pypi/gocept.jasmine/
 
 :Issues:
-    `https://bitbucket.org/gocept/gocept.jasmine/issues`_
+    `https://github.com/gocept/gocept.jasmine/issues`_
 
 :Source code:
-    https://bitbucket.org/gocept/gocept.jasmine/
+    https://github.com/gocept/gocept.jasmine
 
 :Current change log:
-    https://bitbucket.org/gocept/gocept.jasmine/raw/tip/CHANGES.txt
+    https://raw.githubusercontent.com/gocept/gocept.jasmine/master/CHANGES.txt

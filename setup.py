@@ -35,7 +35,7 @@ setup(
     author='Sebastian Wehrmann <sw@gocept.com>',
     author_email='sw@gocept.com',
     license='ZPL 2.1',
-    url='https://bitbucket.org/gocept/gocept.jasmine/',
+    url='https://github.com/gocept/gocept.jasmine',
 
     keywords='jasmine selenium test browser',
     classifiers="""\
