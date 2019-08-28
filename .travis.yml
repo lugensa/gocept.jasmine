@@ -1,12 +1,21 @@
 language: python
+env:
+  global:
+    - MOZ_HEADLESS=1
+addons:
+  firefox: latest
 python:
-- 2.7
+  - 2.7
 install:
-- pip install -U setuptools zc.buildout setuptools-scm
-- buildout -n
+before_install:
+  - pip install zc.buildout
+install:
+  - buildout
+  - wget https://github.com/mozilla/geckodriver/releases/download/v0.25.0/geckodriver-v0.25.0-linux64.tar.gz
+  - tar -xzf geckodriver-v0.25.0-linux64.tar.gz -C bin
+  - export PATH=$(pwd)/bin:$PATH
 script:
-- bin/test --cache-clear --cov-report term-missing --cov src
-after_success: 
+  - bin/test
 cache:
   pip: true
   directories:
