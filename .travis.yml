@@ -1,12 +1,18 @@
 language: python
-services:
-  - docker
+env:
+  global:
+    - MOZ_HEADLESS=1
+addons:
+  firefox: latest
 python:
   - 2.7
+install:
 before_install:
-  - docker pull gocept/pipelines-selenium:latest
+  - pip install zc.buildout
+install:
+  - buildout
 script:
-  - docker run --volume=/home/travis/build/gocept/gocept.jasmine:/gocept.jasmine --workdir="/gocept.jasmine" gocept/pipelines-selenium -c "pip install zc.buildout; buildout; bin/test"
+  - bin/test
 notifications:
   webhooks:
     secure: wWACrSvVHBKktd6vq4SA+KFYOfBmJoXD+6YZxCKU9IxZG8edV0SYu72obtArWL+wlTosL4uC6sLOGUR5YA4GfqGXAOcWZqnvZtogo3S23cN+kYCM2uZ5TVNCxxoiUOQehxdN6dlcAl5B50NBgDrda0sJznjRWgTGgHdkNH9ieJnMdWmXlKeuW0wlNuAdK7QmXHLrbxo56E1x0UF8IYl+XoEeP6g2lMtXiYuLs4d3jgL84d23MMhayPLfJHmbJUT2BtEZTZoXBGcN5J+3tcHwsEH0zDxe9Bw7ZVlJ8p8+QU3/uZ2oUbAUa1XiwA25otQ6yMFCQhV2RFxMcgVuBrvJsWsA8JdmBY+KS4GqUu9nT14vQPOkiG++bHEgWEiJFQGsjBn6k8VaqAS1YCWVMbJ8fh/PRPrFEeJ0mc7zG2oZmVojpqOtcPC77XGx+9hAhtEGy+wGnJKVpZeC+L/UQJ+x1zKU2XkdGfUc7ikN2R/Vb3Hv3gbm/TySAE5c2ZV22bAXR5loAwGcWYMpP6cGxwlUIK1nPWEFrcP0Mi2EGSf6W2dyqdLkeqXOGI5iavOQEplWIbpYsXju4qLwBtM2EbLvg/dk3BtrpbEEZmBkWckp4EcFEHbD8ocChJzO7FAHVsHsy7+bYl4cU1KYoe49/KigiYfiXJnjPniCo44HWB5+pSw=
