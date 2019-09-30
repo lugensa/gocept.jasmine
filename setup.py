@@ -11,7 +11,7 @@ setup(
     version='0.7.dev0',
 
     install_requires=[
-        'fanstatic',
+        'fanstatic >= 1.0',
         'gocept.selenium>=2.0.0b4',
         'jasmine-core',
         'plone.testing',
