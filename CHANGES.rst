@@ -14,6 +14,8 @@ Change log for gocept.jasmine
 
 - Migrate to Github.
 
+- Migrate to python3
+
 
 0.6 (2017-03-21)
 ================
