@@ -28,7 +28,7 @@ class TestApp(object):
         gocept.jasmine.resource.jasmine.need()
         return [
             '<html><head>Jasmine Tests</head><body>{}</body></html>'.format(
-                self.body)]
+                self.body).encode("utf-8")]
 
 
 class Layer(plone.testing.Layer):
