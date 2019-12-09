@@ -1,15 +1,17 @@
-syntax: glob
 
 *.egg-info/
 *.pyc
+.coverage
 .installed.cfg
 .mr.developer.cfg
 .pytest_cache
+.tox
 bin
 build
 develop-eggs
 dist
 doc/_api
 eggs
+geckodriver.log
 local.cfg
 parts

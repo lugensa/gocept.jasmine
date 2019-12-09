@@ -32,8 +32,8 @@ setup(
         ],
     },
 
-    author='Sebastian Wehrmann <sw@gocept.com>',
-    author_email='sw@gocept.com',
+    author='Sebastian Wehrmann',
+    author_email='mail@gocept.com',
     license='ZPL 2.1',
     url='https://github.com/gocept/gocept.jasmine',
 
@@ -42,9 +42,10 @@ setup(
 License :: OSI Approved :: Zope Public License
 Programming Language :: Python
 Programming Language :: Python :: 2
-Programming Language :: Python :: 2.6
 Programming Language :: Python :: 2.7
-Programming Language :: Python :: 2 :: Only
+Programming Language :: Python :: 3
+Programming Language :: Python :: 3.7
+Programming Language :: Python :: 3.8
 """[:-1].split('\n'),
     description=__doc__.strip(),
     long_description='\n\n'.join(open(name).read() for name in (
