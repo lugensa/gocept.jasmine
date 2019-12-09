@@ -2,6 +2,12 @@
 Change log for gocept.jasmine
 =============================
 
+0.8 (unreleased)
+================
+
+- Nothing changed yet.
+
+
 0.7 (2019-12-09)
 ================
 
