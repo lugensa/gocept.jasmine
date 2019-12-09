@@ -9,7 +9,7 @@ Developing gocept.jasmine
     http://pypi.python.org/pypi/gocept.jasmine/
 
 :Issues:
-    `https://github.com/gocept/gocept.jasmine/issues`_
+    https://github.com/gocept/gocept.jasmine/issues
 
 :Source code:
     https://github.com/gocept/gocept.jasmine
