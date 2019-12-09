@@ -1,6 +1,7 @@
 
 *.egg-info/
 *.pyc
+.coverage
 .installed.cfg
 .mr.developer.cfg
 .pytest_cache
