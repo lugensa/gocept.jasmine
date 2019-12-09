@@ -14,7 +14,7 @@ Change log for gocept.jasmine
 
 - Migrate to Github.
 
-- Migrate to python3
+- Support Python 3.7 and 3.8.
 
 
 0.6 (2017-03-21)
