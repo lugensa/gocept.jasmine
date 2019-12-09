@@ -2,7 +2,7 @@
 Change log for gocept.jasmine
 =============================
 
-0.7 (unreleased)
+0.7 (2019-12-09)
 ================
 
 - Remove version pinnings in buildout as this is a library which should
