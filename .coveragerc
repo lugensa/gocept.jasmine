@@ -4,10 +4,7 @@ source = gocept.jasmine
 
 [report]
 precision = 2
-omit = */interfaces.py
-       */interfaces/*
-       */tests.py
-       */tests/*
+fail_under = 85
 
 [html]
 directory = coverage-report

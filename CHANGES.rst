@@ -7,6 +7,8 @@ Change log for gocept.jasmine
 
 - Also release as wheel on PyPI.
 
+- Use GitHub Actions as CI system.
+
 
 0.7 (2019-12-09)
 ================
@@ -18,7 +20,7 @@ Change log for gocept.jasmine
 
 - Require ``pytest < 5`` to keep Python 2 support.
 
-- Migrate to Github.
+- Migrate to GitHub.
 
 - Support Python 3.7 and 3.8.
 
