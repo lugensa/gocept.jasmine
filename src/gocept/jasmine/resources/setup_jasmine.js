@@ -38,4 +38,3 @@ jasmine.Suite.prototype.finish = function(onComplete) {
 };
 
 })();
-
