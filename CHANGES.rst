@@ -2,12 +2,14 @@
 Change log for gocept.jasmine
 =============================
 
-0.8 (unreleased)
+1.0 (unreleased)
 ================
 
-- Also release as wheel on PyPI.
+- Drop support for Python 2.
 
-- Use GitHub Actions as CI system.
+- Add support for Python 3.9.
+
+- Also release as wheel on PyPI.
 
 
 0.7 (2019-12-09)
