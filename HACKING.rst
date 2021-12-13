@@ -15,4 +15,4 @@ Developing gocept.jasmine
     https://github.com/gocept/gocept.jasmine
 
 :Current change log:
-    https://raw.githubusercontent.com/gocept/gocept.jasmine/master/CHANGES.txt
+    https://raw.githubusercontent.com/gocept/gocept.jasmine/main/CHANGES.txt
